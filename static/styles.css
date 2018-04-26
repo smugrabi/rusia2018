@@ -1,0 +1,112 @@
+
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: x-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .red
+{
+    color: #ea433b;
+    padding-left: 10px;
+}
+
+nav .navbar-brand .white
+{
+    color: #FFFFFF;
+}
+
+nav .navbar-brand .user
+{
+    color: #FFFFFF;
+    font-size: small;
+    font-weight: normal;
+
+}
+
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+  min-height:200px;
+}
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+      display: none;
+    }
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main .form-group
+{
+    margin: 10px;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main .errorcode
+{
+    /* size for brand */
+    font-size: xx-large;
+    color: #ea433b;
+}
+
+
+main .alert
+{
+    margin:70px;
+}
+
+p .red {
+    color: #8d0809;
+}
+
+main #groupdetails {
+    padding: 10px;
+    text-align: left;
+    background-color: #1b94fb;
+    color: white;
+}
+
+main #gd {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+

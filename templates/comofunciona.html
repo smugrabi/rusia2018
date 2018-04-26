@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Como funciona
+{% endblock %}
+
+{% block user %}
+    {{(session["user-username"])}}
+{% endblock %}
+
+<!--
+{% block navbar %}
+    <li><a href="/">Home</a></li>
+    <li><a href="/comofunciona"><span class="glyphicon glyphicon-file"></span> Como funciona</a></li>
+{% endblock %}
+-->
+
+{% block main %}
+
+    <br>
+    <div style="text-align: left; border-left: 3px solid red; padding: 10px;">
+        <div>
+            <h2>FASE 1<small>partidos iniciales</small></h2>
+            <p>Llenarás los 48 marcadores de la primera fase.</p>
+            <ul class="list-group">
+                <h5 style= "padding: 10px;">Puntos:</h5>
+                <li class="list-group-item">1 punto marcador correcto <strong>[mc]</strong></li>
+                <li class="list-group-item">1 punto resultado <strong>[r]</strong></li>
+                <li class="list-group-item">1/2 punto total goles <strong>[tg]</strong></li>
+                <li class="list-group-item">1/2 punto primer gol <strong>[pg]</strong></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul style="padding: 0px; list-style-type:none">
+                <li><strong>Ejemplo:</strong> Partido Rusia vs Arabia Saudita</li>
+                <li><strong>Marcador quiniela:</strong>  Rusia 2 - Arabia S. 1 - PG Rusia</li>
+                <li><strong>Marcador final:</strong>     Rusia 3 - Arabia S. 0 - PG Rusia</li>
+                <br>
+                <li><strong>Puntos:</strong> mc <span class="badge">0</span> / r <span class="badge">1</span> / tg <span class="badge">0.5</span> / pg <span class="badge">0.5</span> - <span class="label label-primary">Total puntos: 2</span></li>
+            </ul>
+        </div>
+
+        <div style= "text-align: left;">
+            <ul style="list-style-type:none; background-color: lightgrey;">
+                <li>Premios:</li>
+                <li><strong>$6,500</strong> - persona con mas puntos en esta fase</li>
+                <li><strong>$1,000</strong> - persona con mas marcadores acertados</li>
+                <li><strong>$300</strong> - persona con menos puntos en esta fase</li>
+                <li><small><i>* en caso de empates se divide el premio entre los ganadores</i></small></li>
+                <li><small><i>** en caso de seleccionar 0-0 y así quede el partido, recibirá 1/2 punto por primer gol</i></small></li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align: left; border-left: 3px solid blue; padding: 10px;">
+        <div>
+            <h2>FASE 2<small>octavos</small></h2>
+            <p>Seleccionarás los 16 países que pasarán a octavos y llenarás el marcador de los grupos.</p>
+
+            <ul class="list-group">
+                <h5 style= "padding: 10px;">Puntos:</h5>
+                <li class="list-group-item">1/2 punto por cada país correcto <strong>[pc]</strong></li>
+                <li class="list-group-item">1 punto marcador correcto (de los grupos)  <strong>[mc]</strong></li>
+                <li class="list-group-item">1 punto resultado (de los grupos) <strong>[r]</strong></li>
+                <li class="list-group-item">1/2 punto total goles (de los grupos) <strong>[tg]</strong></li>
+                <li class="list-group-item">1/2 punto primer gol (de los grupos) <strong>[pg]</strong></li>
+            </ul>
+        </div>
+
+        <div style= "text-align: left;">
+            <ul style="padding: 0px; list-style-type:none">
+                <li><strong>Ejemplo:</strong></li>
+                <li>El primer partido de octavos será <b>1C</b> vs <b>2D</b></li>
+                <br>
+                <li><b>En la quiniela puse:</b></li>
+                <ul style="list-style-type:disc">
+                    <li>el primero del grupo C: FRANCIA</li>
+                    <li>el segundo del grupo D: ISLANDIA</li>
+                    <li>Marcador 1C: 2 - 2D: 1</li>
+                    <li>Primer gol: 1C</li>
+                </ul>
+                <li><b>Realmente:</b></li>
+                <ul style="list-style-type:disc">
+                    <li>el primero del grupo C: FRANCIA</li>
+                    <li>el segundo del grupo D: CROACIA</li>
+                    <li>El marcador quedó: Francia 2 - Croacia 1</li>
+                    <li>Primer Gol: Croacia</li>
+                </ul>
+                <br>
+                <li><strong>Puntos:</strong> pc <span class="badge">0.5</span> / mc <span class="badge">1</span> / r <span class="badge">1</span> / tg <span class="badge">0.5</span> / pg <span class="badge">0</span> - <span class="label label-primary">Total puntos: 3</span></li>
+            </ul>
+        </div>
+
+        <div style= " text-align: left;">
+            <ul style="list-style-type:none; background-color: lightgrey;">
+                <li>Premios:</li>
+                <li><strong>$3,500</strong> - persona con mas puntos en esta fase</li>
+                <li><small><i>* en caso de empates se divide el premio entre los ganadores</i></small></li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <div style="text-align: left; border-left: 3px solid orange; padding: 10px;">
+        <div>
+          <h2>FASE 3<small>primeros seis, treceavo y último</small></h2>
+          <p>Seleccionarás quienes quedan en:</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Lugar</th>
+                <th>Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Primer lugar</td>
+                <td>12 puntos</td>
+              </tr>
+              <tr>
+                <td>Segundo lugar</td>
+                <td>10 puntos</td>
+              </tr>
+              <tr>
+                <td>Tercer lugar</td>
+                <td>8 puntos</td>
+              </tr>
+              <tr>
+                <td>Cuarto lugar</td>
+                <td>8 puntos</td>
+              </tr>
+              <tr>
+                <td>Quinto lugar</td>
+                <td>10 puntos</td>
+              </tr>
+              <tr>
+                <td>Sexto lugar</td>
+                <td>12 puntos</td>
+              </tr>
+              <tr>
+                <td>Ultimo lugar</td>
+                <td>5 puntos</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <h4>Bonus adicional (independiente):</h4>
+          <p>Seleccionarás quien crees que quedará en <b>Treceavo lugar</b></p>
+          <br>
+        </div>
+
+
+
+        <div style= "text-align: left;">
+            <ul style="list-style-type:none; background-color: lightgrey;">
+                <li>Premios:</li>
+                <li><strong>$2,000</strong> - persona con mas puntos en esta fase</li>
+                <li><strong>$200</strong> - para la persona que acierte el treceavo lugar</li>
+                <li><small><i>* en caso de empates se divide el premio entre los ganadores</i></small></li>
+                <li><small><i>** Si nadie acertó el 13avo lugar, se le suma el premio a la persona con mas puntos en esta fase.</i></small></li>
+                <li><small><i>*** Se tomará como base la lista oficial de la FIFA</i></small></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

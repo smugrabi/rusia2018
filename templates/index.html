@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block user %}
+    {{(session["user-username"])}}
+{% endblock %}
+
+<!--
+{% block navbar %}
+    <li><a href="/">Home</a></li>
+    <li><a href="/comofunciona"><span class="glyphicon glyphicon-file"></span> Como funciona</a></li>
+{% endblock %}
+-->
+
+{% block main %}
+
+    <div class="alert alert-success">
+      <strong>¡Ya estás registrado!</strong> - en los próximos días recibirás instrucciones para empezar a llenar tus tablas
+    </div>
+
+{% endblock %}

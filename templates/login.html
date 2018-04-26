@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block carousel %}
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="/static/wc-russia-2018.jpg" alt="Image">
+            <div class="carousel-caption">
+              <h3>Bienvenidos a Rusia2018VIP</h3>
+              <p>siempre con opciones para ganar</p>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block main %}
+
+    <form action="/login" method="post" id="login">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password"/>
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+
+
+{% endblock %}
